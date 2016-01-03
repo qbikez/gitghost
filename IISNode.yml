@@ -1,0 +1,3 @@
+loggingEnabled: true
+devErrorsEnabled: true
+nodeProcessCommandLine: d:\home\site\wwwroot\bin\%PROCESSOR_ARCHITECTURE%\node.exe
