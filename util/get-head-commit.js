@@ -24,7 +24,7 @@ function getHeadCommit (path) {
   return git.Repository.open(path)
     .then(function (repo) {
       repository = repo;
-
+      console.log("getHeadCommit: running getHeadCommit on repo at '"+path+"'");
       return repository.getHeadCommit();
     })
     .then(function (commit) {

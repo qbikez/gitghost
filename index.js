@@ -55,8 +55,9 @@ server.on('push', function (context) {
     // helper function to write output
     context.write = function () {
       let message = format.apply(null, arguments);
+      console.log(message);
       message = encode(message + '\n');
-
+      
       res.queue(message);
     };
 

@@ -25,19 +25,22 @@ module.exports = workingToBare;
 
 function workingToBare (path) {
   let tmpPath = tempfile();
-
+  console.log("workingToBare: moving '" + path + "' to '" + tmpPath+ "'");
   return mv(path, tmpPath)
     .then(function () {
-      return mv(join(tmpPath, '.git'), path);
+      var p1 = join(tmpPath, '.git');
+      console.log("workingToBare: moving '" + p1 + "' to '" + path + "'");
+      return mv(p1, path);
     })
     .then(function () {
       let options = {
         cwd: path
       };
-
+      console.log("workingToBare: running 'git config --local --bool core.bare true'");
       return exec('git', ['config', '--local', '--bool', 'core.bare', 'true'], options);
     })
     .then(function () {
+      console.log("workingToBare: removing '" + tmpPath + "'");
       return rm(tmpPath);
     });
 }

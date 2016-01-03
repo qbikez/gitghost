@@ -11,6 +11,9 @@ bugsnag.register(process.env.BUGSNAG_API_KEY, {
   notifyReleaseStages: ['production', 'staging']
 });
 
+console.log("starting server.js");
+console.log(process.version);
+console.log(process.config);
 
 /**
  * Dependencies
