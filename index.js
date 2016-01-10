@@ -106,6 +106,15 @@ function gitghost () {
       email: credentials.name,
       password: credentials.pass
     };
+    
+    
+  var regex = /([^\/]+)\:([^\/]+)\:([^\/]+)/;
+  var m = req.url.match(regex);
+  if (m) {
+    req.clientId = m[1];
+    req.clientSecret = m[2];
+    req.url = req.url.replace(regex, m[3]);
+  }
 
     server.handle(req, res);
   });
