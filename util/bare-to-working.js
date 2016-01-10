@@ -45,5 +45,9 @@ function bareToWorking (path) {
       };
       console.log("bareToWorking: running 'git reset --hard' with cwd='"+path+"'");
       return exec('git', ['reset', '--hard'], options);
+    })
+    .catch(function(reason) {
+       console.log("bareToWorking: ERROR:" + reason);
+       throw reason; 
     });
 }
