@@ -4,7 +4,7 @@
   "description": "Publish posts to your Ghost blog via git",
   "license": "MIT",
   "main": "index.js",
-  "repository": "vdemedes/gitghost",
+  "repository": "qbikez/gitghost",
   "author": {
     "name": "Vadim",
     "email": "vdemedes@gmail.com",
