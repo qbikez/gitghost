@@ -28,6 +28,7 @@
     "pushover": "qbikez/pushover",
     "redis": "^2.0.0",
     "rimraf": "^2.4.3",
+    "sleep": "^3.0.0",
     "tar-fs": "^1.8.1",
     "tempfile": "^1.1.1",
     "trim": "0.0.1"
