@@ -42,5 +42,9 @@ function workingToBare (path) {
     .then(function () {
       console.log("workingToBare: removing '" + tmpPath + "'");
       return rm(tmpPath);
+    })
+    .catch(function(reason) {
+       console.log("workingToBare: ERROR:" + reason);
+       throw reason; 
     });
 }
