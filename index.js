@@ -117,5 +117,6 @@ function gitghost () {
   }
 
     server.handle(req, res);
+    console.log('gitghost server: finished');
   });
 }
