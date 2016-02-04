@@ -59,6 +59,7 @@ function gitDiff (path, prevCommit, nextCommit) {
         });
     })
     .then(function (diff) {
+      
       commits.forEach(function (commit) {
         commit.free();
       });
