@@ -1,4 +1,4 @@
 loggingEnabled: true
 devErrorsEnabled: true
-nodeProcessCommandLine: c:\src\hmdev\gitghost\bin\amd64\node.exe
+nodeProcessCommandLine: d:\home\site\wwwroot\bin\%PROCESSOR_ARCHITECTURE%\node.exe
 flushResponse: true
