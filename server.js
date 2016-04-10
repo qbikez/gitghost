@@ -16,9 +16,17 @@ bugsnag.register(process.env.BUGSNAG_API_KEY, {
   notifyReleaseStages: ['production', 'staging']
 });
 
-console.log("starting server.js");
+
+/**
+ * Configuration
+ */
+
+const port = process.env.PORT || 3000;
+
+
+console.log("starting server.js at port " + port);
 console.log(process.version);
-console.log(process.config);
+//console.log(process.config);
 
 
 /**
@@ -28,11 +36,6 @@ console.log(process.config);
 const gitghost = require('./');
 
 
-/**
- * Configuration
- */
-
-const port = process.env.PORT || 3000;
 
 
 /**
