@@ -32,7 +32,7 @@ function gitAdd (path, message) {
       console.log("gitAdd: running 'git commit' on path '"+path+"'");
       return exec('git', ['commit', '-m', message], options).catch(function (error) {
           console.log("gitAdd: exception: " + error);
-          console.error(error);
+//          console.error(error);
       });
     });
 }
