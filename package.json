@@ -25,7 +25,7 @@
     "mz": "^2.0.0",
     "nodegit": "qbikez/nodegit",
     "pify": "^2.2.0",
-    "pushover": "qbikez/pushover",
+    "pushover": "qbikez/pushover#11d4913",
     "redis": "^2.0.0",
     "rimraf": "^2.4.3",
     "sleep": "^3.0.0",
