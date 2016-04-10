@@ -65,9 +65,8 @@ server.on('push', function (context) {
     context.done = done;
 
     co.call(context, push).catch(function (err) {
-      done();
-
       errorHandler(err);
+      done();
     });
   });
 
@@ -117,6 +116,6 @@ function gitghost () {
   }
 
     server.handle(req, res);
-    console.log('gitghost server: finished');
+    console.log('gitghost server: FINISHED');
   });
 }
